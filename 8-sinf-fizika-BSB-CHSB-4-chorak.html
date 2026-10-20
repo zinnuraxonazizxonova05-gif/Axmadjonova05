@@ -1,0 +1,157 @@
+<!DOCTYPE html><html lang="uz"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>8-sinf fizika — BSB va CHSB (4 chorak)</title>
+<style>:root{--bg:#f6f4ee;--tx:#14213d;--ac:#1f6f9f;--card:#fff}@media(prefers-color-scheme:dark){:root{--bg:#0f1b2d;--tx:#f2efe6;--ac:#5fb8e8;--card:#17253b}}
+body{margin:0;background:var(--bg);color:var(--tx);font:18px/1.5 Georgia,serif;padding:20px}main{max-width:640px;margin:auto}h1{font-size:28px}
+.g{display:grid;gap:14px;margin-top:20px}button{font:inherit;text-align:left;padding:18px 20px;border-radius:14px;border:2px solid var(--ac);background:var(--card);color:var(--tx);cursor:pointer}
+button b{display:block;font-size:22px;color:var(--ac)}button span{font-size:16px;opacity:.85}.meta{color:var(--ac);font-weight:700}.q{background:var(--card);border:1px solid #8884;border-radius:12px;padding:14px 16px;margin:12px 0}.o{margin:4px 0 0 8px}.a{display:none;color:#1a7f3c;font-weight:700;margin-top:6px}.show .a{display:block}.sc{float:right;font-size:15px;opacity:.8}nav{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}nav button{padding:10px 16px}button.on{background:var(--ac);color:#fff}#view{display:none}main.wide{max-width:820px}@media print{nav{display:none}body{background:#fff;color:#000}.q{break-inside:avoid}}</style></head><body><main>
+<div id="home"><h1>8-sinf fizika: BSB va CHSB</h1><p>Chorakni tanlang. Har chorakda BSB-1, BSB-2 va CHSB bor.</p><div class="g" id="g"></div></div><div id="view"></div></main>
+<script>
+const T=(q,o,a)=>({q,o,a,s:1}),Q=(q,a,s)=>({q,a,s});
+const Q1={
+b1:{t:'BSB-1 · Elektr zaryad. Kulon qonuni',x:[
+T('Atom yadrosi qanday zaryadga ega?',['manfiy','musbat','neytral','o‘zgaruvchan'],'B'),
+T('Elektronning zaryadi:',['+1,6·10⁻¹⁹ Kl','−1,6·10⁻¹⁹ Kl','0','−1,6·10⁻⁹ Kl'],'B'),
+T('Elektr zaryad birligi:',['Amper','Volt','Kulon','Om'],'C'),
+T('Bir xil ishorali zaryadlar bir-biriga:',['tortiladi','itariladi','ta’sirlashmaydi','avval tortilib, keyin itariladi'],'B'),
+T('Ebonit tayoqcha junga ishqalanganda manfiy zaryadlanadi, chunki:',['protonlar o‘tadi','elektronlar junda tayoqchaga o‘tadi','yadrolar o‘tadi','neytronlar o‘tadi'],'B'),
+T('Kulon qonuni:',['F = kq₁q₂/r²','F = kq₁q₂·r²','F = k(q₁+q₂)/r','F = kq₁/(q₂r)'],'A'),
+T('Zaryadlar orasidagi masofa 2 marta ortsa, ta’sir kuchi:',['2 marta kamayadi','2 marta ortadi','4 marta kamayadi','4 marta ortadi'],'C'),
+T('Atomda 8 proton va 8 elektron bor. Atom:',['musbat ion','manfiy ion','neytral','aniqlab bo‘lmaydi'],'C'),
+T('Elektroskop nimani aniqlaydi?',['massani','jism zaryadlanganligini','temperaturani','tok kuchini'],'B'),
+T('Neytral jism 5 ta elektron yo‘qotdi. Uning zaryadi:',['−5e','+5e','0','+10e'],'B'),
+Q('Zaryadning saqlanish qonunini ta’riflang.','Yopiq sistemada zaryadlarning algebraik yig‘indisi o‘zgarmaydi.',2),
+Q('q₁=2·10⁻⁶ Kl va q₂=4·10⁻⁶ Kl zaryadlar vakuumda 0,2 m masofada. O‘zaro ta’sir kuchini toping (k=9·10⁹ N·m²/Kl²).','F = 9·10⁹·8·10⁻¹²/0,04 = 1,8 N',3),
+Q('Zaryadlar orasidagi kuch 4 N. Masofa 2 marta kamaytirilib, zaryadlardan biri 2 marta orttirilsa, kuch qancha bo‘ladi?','4 marta (masofa) · 2 marta (zaryad) = 8 marta → 32 N',3)]},
+b2:{t:'BSB-2 · Elektr toki. Om qonuni',x:[
+T('Metallarda elektr tokini hosil qiladi:',['protonlar','ionlar','erkin elektronlar','neytronlar'],'C'),
+T('Tok kuchi birligi:',['Volt','Amper','Om','Vatt'],'B'),
+T('Tok kuchi formulasi:',['I = q/t','I = q·t','I = t/q','I = U·R'],'A'),
+T('Ampermetr zanjirga qanday ulanadi?',['parallel','ketma-ket','aralash','farqi yo‘q'],'B'),
+T('Voltmetr iste’molchiga:',['parallel ulanadi','ketma-ket ulanadi','ulanmaydi','faqat manbaga ketma-ket'],'A'),
+T('Zanjirning bir qismi uchun Om qonuni:',['I = U/R','I = U·R','I = R/U','U = I/R'],'A'),
+T('Qarshilik birligi:',['Om','Amper','Volt','Kulon'],'A'),
+T('R = 10 Om, U = 20 V. Tok kuchi:',['0,5 A','2 A','200 A','30 A'],'B'),
+T('O‘tkazgich uzunligi ortsa, uning qarshiligi:',['kamayadi','o‘zgarmaydi','ortadi','nolga teng'],'C'),
+T('Reostatning vazifasi:',['kuchlanishni o‘lchash','zanjirdagi tok kuchini o‘zgartirish','zaryadni saqlash','zanjirni o‘chirish'],'B'),
+Q('Elektr zanjirining asosiy qismlarini sanang.','Tok manbai, iste’molchi, ulovchi simlar, kalit (o‘lchov asboblari).',2),
+Q('3 minutda o‘tkazgich ko‘ndalang kesimidan 90 Kl zaryad o‘tdi. Tok kuchini toping.','t = 180 s; I = q/t = 90/180 = 0,5 A',3),
+Q('Qarshiligi 15 Om bo‘lgan o‘tkazgichdan 0,4 A tok o‘tmoqda. Uchlaridagi kuchlanishni toping.','U = I·R = 0,4·15 = 6 V',3)]},
+c:{t:'CHSB · 1-chorak yakuniy',x:[
+T('Zaryadlar o‘zaro tortishadi, qachonki ular:',['bir xil ishorali','turli ishorali','neytral','har ikkisi ham elektron'],'B'),
+T('Proton zaryadi:',['−e','0','+e','+2e'],'C'),
+T('Zaryadlar orasidagi masofa 3 marta ortsa, Kulon kuchi:',['3 marta kamayadi','9 marta kamayadi','9 marta ortadi','o‘zgarmaydi'],'B'),
+T('1 Kl =',['1 A·s','1 A/s','1 V·s','1 Om·A'],'A'),
+T('Tok yo‘nalishi sifatida qabul qilingan yo‘nalish:',['elektronlar harakati','musbat zaryadlar harakati','magnit maydon yo‘nalishi','tasodifiy yo‘nalish'],'B'),
+T('Om qonuniga ko‘ra kuchlanish:',['U = I/R','U = R/I','U = I·R','U = I+R'],'C'),
+T('R = 5 Om, I = 3 A bo‘lsa, U:',['15 V','1,7 V','8 V','0,6 V'],'A'),
+T('Ampermetrning ichki qarshiligi:',['juda katta','juda kichik','cheksiz','farqi yo‘q'],'B'),
+T('Uzunligi 2 marta katta (kesim bir xil) o‘tkazgichning qarshiligi:',['2 marta kamayadi','o‘zgarmaydi','2 marta ortadi','4 marta ortadi'],'C'),
+T('Kuchlanish — bu:',['zaryadni ko‘chirishda bajarilgan ishning shu zaryadga nisbati','tok kuchining vaqtga ko‘paytmasi','o‘tkazgich uzunligi','zaryadlar soni'],'A'),
+Q('Zanjirning bir qismi uchun Om qonunini ta’riflang va formulasini yozing.','Tok kuchi kuchlanishga to‘g‘ri, qarshilikka teskari proporsional: I = U/R.',2),
+Q('q₁=q₂=3·10⁻⁶ Kl zaryadlar vakuumda 0,3 m masofada. O‘zaro ta’sir kuchi qancha?','F = 9·10⁹·9·10⁻¹²/0,09 = 0,9 N',3),
+Q('Zanjirda U = 12 V, R = 4 Om. Tok kuchini va 5 minutda o‘tgan zaryadni toping.','I = 12/4 = 3 A; q = I·t = 3·300 = 900 Kl',3)]}};
+const Q2={b1:{t:'BSB-1 · O‘tkazgichlarni ulash',x:[
+T('Ketma-ket ulashda umumiy qarshilik:',['R = R₁ + R₂','1/R = 1/R₁ + 1/R₂','R = R₁·R₂','R = R₁ − R₂'],'A'),
+T('Parallel ulashda barcha tarmoqlarda bir xil bo‘ladi:',['tok kuchi','kuchlanish','qarshilik','quvvat'],'B'),
+T('Ketma-ket ulashda umumiy kuchlanish:',['U = U₁ = U₂','U = U₁ + U₂','U = U₁·U₂','U = U₁ − U₂'],'B'),
+T('Parallel ulashda umumiy qarshilik:',['R = R₁ + R₂','R = R₁·R₂','1/R = 1/R₁ + 1/R₂','R = R₁/R₂'],'C'),
+T('Ikkita 10 Om qarshilik parallel ulangan. Umumiy qarshilik:',['20 Om','10 Om','5 Om','2,5 Om'],'C'),
+T('Parallel ulashda umumiy tok kuchi:',['I = I₁ = I₂','I = I₁ + I₂','I = I₁·I₂','I = 0'],'B'),
+Q('Uyda iste’molchilar nima uchun parallel ulanadi?','Har biri bir xil kuchlanishda ishlaydi va bir-biridan mustaqil yoqiladi/o‘chiriladi.',2),
+Q('R₁=4 Om va R₂=6 Om ketma-ket ulangan, U=20 V. Umumiy qarshilik va tok kuchini toping.','R = 10 Om; I = 20/10 = 2 A',3)]},
+b2:{t:'BSB-2 · Tok ishi va quvvati',x:[
+T('Tok ishi formulasi:',['A = UIt','A = U/(It)','A = IR/t','A = Ut/I'],'A'),
+T('Elektr quvvati:',['P = U/I','P = UI','P = I/U','P = U + I'],'B'),
+T('Quvvat birligi:',['Joul','Amper','Vatt','Om'],'C'),
+T('1 kVt·soat — bu:',['quvvat birligi','energiya (ish) birligi','kuchlanish birligi','tok birligi'],'B'),
+T('U = 220 V, I = 2 A. Quvvat:',['110 Vt','222 Vt','440 Vt','218 Vt'],'C'),
+T('Elektr hisoblagich o‘lchaydi:',['quvvatni','kuchlanishni','sarflangan energiyani','tok kuchini'],'C'),
+Q('Tok ishining formulasini yozing va birligini ayting.','A = U·I·t; birligi Joul (J).',2),
+Q('Quvvati 100 Vt lampa 5 soat yondi. Sarflangan energiyani kVt·soat va MJ da toping.','0,1 kVt·5 soat = 0,5 kVt·soat = 1,8 MJ',3)]},
+c:{t:'CHSB · 2-chorak yakuniy',x:[
+T('R₁=3 Om va R₂=7 Om ketma-ket. Umumiy qarshilik:',['4 Om','10 Om','21 Om','2,1 Om'],'B'),
+T('Ikkita 6 Om qarshilik parallel. Umumiy qarshilik:',['12 Om','6 Om','3 Om','36 Om'],'C'),
+T('Joul–Lents qonuni:',['Q = I²Rt','Q = IR/t','Q = U/(It)','Q = IRt²'],'A'),
+T('Tok va qarshilik o‘zgarmas, vaqt 2 marta ortsa, ajralgan issiqlik:',['2 marta kamayadi','o‘zgarmaydi','2 marta ortadi','4 marta ortadi'],'C'),
+T('Tok kuchi 2 marta ortsa (R, t o‘zgarmas), Q:',['2 marta ortadi','4 marta ortadi','o‘zgarmaydi','2 marta kamayadi'],'B'),
+T('Quvvati 2 kVt asbob 3 soat ishladi. Energiya:',['6 kVt·soat','5 kVt·soat','1,5 kVt·soat','0,67 kVt·soat'],'A'),
+T('Saqlagichning (predoxranitel) vazifasi:',['tokni oshirish','qisqa tutashuvda zanjirni uzish','kuchlanishni o‘lchash','zaryadni saqlash'],'B'),
+T('Parallel ulangan ikki lampadan biri o‘chirilsa, ikkinchisi:',['o‘chadi','yonishda davom etadi','miltillaydi','kuchlanishi nolga tushadi'],'B'),
+Q('Joul–Lents qonunini ta’riflang.','O‘tkazgichda ajralgan issiqlik miqdori tok kuchi kvadrati, qarshilik va vaqtga proporsional: Q = I²Rt.',2),
+Q('R₁=2 Om va R₂=3 Om ketma-ket, U=15 V. Tok kuchi va R₁ dagi kuchlanishni toping.','R = 5 Om; I = 3 A; U₁ = 3·2 = 6 V',3),
+Q('R = 20 Om o‘tkazgichdan 2 A tok 10 s o‘tdi. Ajralgan issiqlik?','Q = 2²·20·10 = 800 J',3)]}};
+const Q3={b1:{t:'BSB-1 · Magnit maydon',x:[
+T('Magnitning qutblari:',['shimoliy va janubiy','musbat va manfiy','katod va anod','qutbi yo‘q'],'A'),
+T('Bir xil nomli magnit qutblar bir-biriga:',['tortiladi','itariladi','ta’sirlashmaydi','birlashadi'],'B'),
+T('Tok magnit maydon hosil qilishini birinchi kuzatgan olim:',['Faradey','Ersted','Amper','Om'],'B'),
+T('Magnit maydon chiziqlari:',['yopiq egri chiziqlar','ochiq chiziqlar','parallel nurlar','nuqtalar'],'A'),
+T('Tok magnit maydoni yo‘nalishi nima bilan aniqlanadi?',['Om qonuni','parma (o‘ng qo‘l) qoidasi','Kulon qonuni','Arximed qonuni'],'B'),
+T('Kompas strelkasi Yer magnit maydonida:',['taxminan shimol–janub bo‘ylab o‘rnashadi','sharq–g‘arb bo‘ylab','tasodifiy','aylanadi'],'A'),
+Q('Ersted tajribasini tavsiflang.','Tok o‘tayotgan sim yonidagi magnit strelka og‘adi: tok atrofida magnit maydon hosil bo‘ladi.',2),
+Q('Elektromagnit tuzilishi va uning kuchini oshirish usullarini ayting.','G‘altak va temir o‘zak; o‘ramlar sonini yoki tok kuchini oshirish, o‘zak kiritish.',3)]},
+b2:{t:'BSB-2 · Amper kuchi. Elektromagnit induksiya',x:[
+T('Magnit maydonning tokli o‘tkazgichga ta’sir kuchi:',['Amper kuchi','Kulon kuchi','ishqalanish kuchi','og‘irlik kuchi'],'A'),
+T('Amper kuchi yo‘nalishi qaysi qoida bilan topiladi?',['parma qoidasi','chap qo‘l qoidasi','Om qonuni','Arximed qonuni'],'B'),
+T('Elektromagnit induksiyani kashf etgan olim:',['Ersted','Om','Faradey','Kulon'],'C'),
+T('Induksion tok hosil bo‘ladi, qachonki:',['g‘altakdagi magnit oqimi o‘zgarsa','g‘altak tinch tursa','tok o‘zgarmas bo‘lsa','magnit yo‘q bo‘lsa'],'A'),
+T('Elektr dvigatel energiyani aylantiradi:',['elektrdan mexanikaga','mexanikadan elektrga','issiqlikdan elektrga','yorug‘likdan mexanikaga'],'A'),
+T('Generator energiyani aylantiradi:',['elektrdan mexanikaga','issiqlikdan yorug‘likka','mexanikadan elektrga','kimyoviydan issiqlikka'],'C'),
+Q('Elektromagnit induksiya hodisasi nima?','Berk konturdan o‘tuvchi magnit oqimi o‘zgarganda unda induksion tok hosil bo‘lishi.',2),
+Q('Transformatorda birlamchi o‘ramlar 1000 ta, ikkilamchisi 100 ta, U₁=220 V. U₂ ni toping.','U₂ = U₁·N₂/N₁ = 220·100/1000 = 22 V',3)]},
+c:{t:'CHSB · 3-chorak yakuniy',x:[
+T('Tok o‘tayotgan sim yonida magnit strelkaning og‘ishi nimani ko‘rsatadi?',['tok magnit maydon hosil qiladi','sim zaryadlangan','strelka elektr tokini o‘tkazadi','sim magnitlanmagan'],'A'),
+T('Doimiy magnit ikkiga bo‘lindi. Har bir bo‘lak:',['faqat shimoliy qutbli','ikki qutbli','qutbsiz','faqat janubiy qutbli'],'B'),
+T('Elektromagnit kuchini oshirish uchun:',['o‘ramlar sonini kamaytirish','o‘zakni olib tashlash','tok kuchini oshirish','tokni uzish'],'C'),
+T('Chap qo‘l qoidasi nimani aniqlaydi?',['induksion tok kuchini','tok qarshiligini','magnit oqimini','Amper kuchi yo‘nalishini'],'D'),
+T('Transformator ishlaydi:',['o‘zgarmas tokda','o‘zgaruvchan tokda','faqat batareyada','har qanday tokda'],'B'),
+T('Magnit induksiya birligi:',['Tesla','Vatt','Om','Kulon'],'A'),
+T('Elektr dvigatelning asosiy qismlari:',['anod va katod','linza va ekran','g‘altak va kalit','stator va rotor'],'D'),
+T('Induksion tokning yo‘nalishi qaysi qoida bilan aniqlanadi?',['Kulon qonuni','Om qonuni','Lens qoidasi','Arximed qonuni'],'C'),
+Q('Transformatorning vazifasini ayting.','O‘zgaruvchan tok kuchlanishini oshiradi yoki kamaytiradi.',2),
+Q('B=0,5 T maydonda l=0,2 m o‘tkazgichdan I=4 A tok o‘tmoqda (o‘tkazgich maydonga tik). Amper kuchi?','F = B·I·l = 0,5·4·0,2 = 0,4 N',3),
+Q('Transformator: U₁=220 V, N₁=880, N₂=40. U₂ ni toping.','U₂ = 220·40/880 = 10 V',3)]}};
+const Q4={b1:{t:'BSB-1 · Yorug‘likning tarqalishi va qaytishi',x:[
+T('Yorug‘likning vakuumdagi tezligi:',['3·10⁸ m/s','340 m/s','3·10⁶ m/s','3·10⁴ m/s'],'A'),
+T('Bir jinsli muhitda yorug‘lik:',['to‘g‘ri chiziq bo‘ylab tarqaladi','egri chiziq bo‘ylab','tarqalmaydi','faqat tebranadi'],'A'),
+T('Soya hosil bo‘lishiga sabab:',['qaytish','sinish','yorug‘likning to‘g‘ri chiziqli tarqalishi','difraksiya'],'C'),
+T('Yorug‘likning qaytish qonuni:',['tushish burchagi = qaytish burchagi','tushish burchagi > qaytish burchagi','tushish = 2·qaytish','burchaklar bog‘liq emas'],'A'),
+T('Tekis ko‘zgudagi tasvir:',['haqiqiy, kichraygan','mavhum, buyum o‘lchamida','haqiqiy, kattalashgan','tasvir bo‘lmaydi'],'B'),
+T('Tushish burchagi 30° bo‘lsa, qaytish burchagi:',['60°','30°','0°','90°'],'B'),
+Q('Quyosh tutilishi qanday hosil bo‘ladi?','Oy Quyosh va Yer orasiga kelib, Oy soyasi Yerga tushadi.',2),
+Q('Tushish burchagi 40°. Qaytish burchagini va tushgan hamda qaytgan nurlar orasidagi burchakni toping.','Qaytish 40°; orasidagi burchak 80°',3)]},
+b2:{t:'BSB-2 · Yorug‘likning sinishi. Linzalar',x:[
+T('Yorug‘likning ikki muhit chegarasida yo‘nalishini o‘zgartirishi:',['sinish','qaytish','yutilish','difraksiya'],'A'),
+T('Yig‘uvchi linza:',['o‘rtasi chetidan yupqa','o‘rtasi chetidan qalin','ikki tomoni tekis','faqat shaffof emas'],'B'),
+T('Linzaning optik kuchi birligi:',['metr','vatt','dioptriya','om'],'C'),
+T('Fokus masofasi 0,5 m bo‘lsa, optik kuch:',['0,5 dptr','2 dptr','5 dptr','0,2 dptr'],'B'),
+T('Oq yorug‘lik prizmada:',['yutiladi','spektrga yoyiladi','qaytmaydi','qutblanadi'],'B'),
+T('Fotoapparat obyektivi:',['sochuvchi linza','prizma','tekis ko‘zgu','yig‘uvchi linza'],'D'),
+Q('Linzaning fokus masofasi nima?','Linzaning bosh optik o‘qiga parallel nurlar to‘planadigan nuqtadan linzagacha masofa.',2),
+Q('Yig‘uvchi linzaning optik kuchi 4 dptr. Fokus masofasini toping.','F = 1/D = 1/4 = 0,25 m',3)]},
+c:{t:'CHSB · 4-chorak yakuniy',x:[
+T('Tabiiy yorug‘lik manbai:',['Quyosh','lampochka','shamchiroq','lazer'],'A'),
+T('Yorug‘lik ikki muhit chegarasiga tushganda:',['faqat qaytadi','faqat yutiladi','faqat sinadi','qaytadi, sinadi va yutiladi'],'D'),
+T('Buyum tekis ko‘zgudan 2 m uzoqda. Buyum bilan tasvir orasidagi masofa:',['1 m','2 m','4 m','0'],'C'),
+T('Sochuvchi linza beradigan tasvir:',['haqiqiy','mavhum, kichraygan','katta haqiqiy','tasvir bermaydi'],'B'),
+T('Ko‘zda tasvir hosil bo‘ladigan qavat:',['shox parda','to‘r parda','rangdor parda','kipriklar'],'B'),
+T('Kamalak hosil bo‘lishiga sabab:',['to‘g‘ri chiziqli tarqalish','qutblanish','yorug‘lik dispersiyasi','difraksiya'],'C'),
+T('Mikroskop vazifasi:',['mayda buyumlarni kattalashtirib ko‘rsatish','uzoq jismlarni yaqinlashtirish','yorug‘likni qaytarish','tokni o‘lchash'],'A'),
+T('Fokus masofasi 20 sm bo‘lgan yig‘uvchi linzaning optik kuchi:',['0,05 dptr','5 dptr','20 dptr','2 dptr'],'B'),
+Q('Yorug‘likning sinish hodisasiga misol keltiring.','Suvga tushirilgan qalamning singan ko‘rinishi.',2),
+Q('Optik kuchi 2 dptr bo‘lgan linzaning fokus masofasi?','F = 1/2 = 0,5 m',3),
+Q('Oydan Yergacha masofa 384 000 km. Yorug‘lik uni qancha vaqtda bosib o‘tadi (c=3·10⁸ m/s)?','t = 3,84·10⁸/3·10⁸ = 1,28 s',3)]}};
+
+const M={1:['1-chorak','Elektr zaryad, Kulon qonuni, elektr toki, Om qonuni',Q1],2:['2-chorak','O‘tkazgichlarni ulash, tok ishi va quvvati, Joul–Lents qonuni',Q2],3:['3-chorak','Magnit maydon, Amper kuchi, elektromagnit induksiya',Q3],4:['4-chorak','Yorug‘lik hodisalari: qaytish, sinish, linzalar',Q4]};
+function render(){const D=window.DATA,out=document.getElementById('out');let cur='b1';
+function draw(){const d=D[cur],tot=d.x.reduce((s,e)=>s+e.s,0);let n=0;
+out.innerHTML=`<p class="meta">${d.t} · maksimal ball: ${tot}</p><p>F.I.Sh.: ____________________ Sana: ________</p>`+d.x.map(e=>{n++;
+const o=e.o?e.o.map((v,i)=>`<div class="o">${'ABCD'[i]}) ${v}</div>`).join(''):'';
+return `<div class="q"><span class="sc">${e.s} ball</span><b>${n}.</b> ${e.q}${o}<div class="a">Javob: ${e.a}</div></div>`}).join('')}
+document.querySelectorAll('nav [data-k]').forEach(b=>b.onclick=()=>{cur=b.dataset.k;document.querySelectorAll('nav [data-k]').forEach(x=>x.classList.toggle('on',x===b));draw()});
+document.getElementById('ans').onclick=()=>out.classList.toggle('show');draw()}
+function openQ(k){const [n,m,D]=M[k];window.DATA=D;
+document.getElementById('home').style.display='none';const v=document.getElementById('view');v.style.display='block';
+v.innerHTML=`<button onclick="back()">← Choraklar</button><h1>8-sinf fizika · ${n}</h1><p>${m}</p><nav><button data-k="b1" class="on">BSB-1</button><button data-k="b2">BSB-2</button><button data-k="c">CHSB</button><button id="ans">Javoblar</button><button onclick="print()">Chop etish</button></nav><div id="out"></div>`;
+document.querySelector('main').className='wide';render();scrollTo(0,0)}
+function back(){document.getElementById('view').style.display='none';document.getElementById('home').style.display='block';document.querySelector('main').className=''}
+document.getElementById('g').innerHTML=Object.keys(M).map(k=>`<button onclick="openQ(${k})"><b>${M[k][0]}</b><span>${M[k][1]}</span></button>`).join('');
+</script></body></html>
